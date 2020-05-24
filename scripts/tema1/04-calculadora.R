@@ -1,3 +1,6 @@
+5 %/% 2 #Cociente de la division entera
+5 %% 2 #Resto de la división entera
+
 2*(3+5/2)
 
 2*((3+5)/2)
@@ -35,9 +38,9 @@ Inf
 
 -Inf
 
-NA
+NA #Not available
 
-NaN
+NaN #Not a number, operaciones no permitidas
 
 5/0
 
@@ -47,7 +50,7 @@ NaN
 
 2 ^(-15) # 3.051758e-05 = 0.00003051758
 
-c(2^30, 2^(-15), 1, 2, 3/2)
+c(2^30, 2^(-15), 1, 2, 3/2) #Vector c
 
 
 sqrt(25)
@@ -69,7 +72,9 @@ factorial(4)
 
 factorial(0)
 
-choose(5, 3)
+choose(5, 3) #Número combinatorio
+
+choose(3,2)
 
 choose(3,5)
 
@@ -97,34 +102,34 @@ asin(5) #arc sin x in [-1,1]
 
 acos(-8)
 
-print(sqrt(2),10)
-round(sqrt(2), 3)
-floor(sqrt(2))
-ceiling(sqrt(2))
-trunc(sqrt(2))
+print(sqrt(2),10) #El parametro derecho es cuantas cifras significativas
+round(sqrt(2), 3) #El parametro derecho es cuantas cifras significativas
+floor(sqrt(2)) #Por defecto
+ceiling(sqrt(2)) #Por exceso
+trunc(sqrt(2)) #Truncamiento
 
 sqrt(2)^2-2
 
 round(sqrt(2), 4)^2
 
 2^50
-print(2^50, 15)
+print(2^50, 15) #15 cifras significativos(decimales), como mucho puedes poner 16
 print(2^50, 2)
-print(pi, 22)
+print(pi, 10)
 #3.141592653589793115998
 #3.141592653589793238462
 
 round(1.25,1)
 round(1.35,1)
 round(sqrt(2),0)
-round(sqrt(2))
+round(sqrt(2)) #Por defecto el numero de digitos decimales es 0
 
-round(digits = 5, sqrt(2))
+round(digits = 5, sqrt(2)) #Hay que poner un nombre al parametro de decimales
 round(5, sqrt(2))
 
 
-floor(-3.45)
-ceiling(-3.45)
+floor(-3.45) #Por defecto
+ceiling(-3.45) #Por exceso
 trunc(-3.45)
 
 
@@ -138,11 +143,12 @@ sin(pi/4) + cos(pi/4) -> z
 z
 
 edad <- 30
-
+edad
 nombre = "Juan Gabriel"
 
 HOLA = 1
 hola = 5
+hola
 
 pi.4 = 4*pi
 pi.4
@@ -157,9 +163,15 @@ f = function(x) {
   x^3 - (3^x) * sin(x)
 }
 
+f2 = function(x){
+  x^3
+}
+
 f(4) # 4^3 - 3^4 * sin(4)
 f(5)
 f(pi/2)
+
+f2(5)
 
 suma1 <- function(t){
   t + 1
@@ -183,7 +195,7 @@ suma5 <- function(numero){
   numero = suma1(numero);
   numero = suma1(numero);
   numero = suma1(numero);
-  suma1(numero)
+  suma1(numero) #La ultima instrucción tiene implicito el return
 }
 
 suma5(3)
@@ -192,9 +204,11 @@ ls()
 
 rm(product)
 
+#product(4,5) esto da error ya que hemos removido la función remove
+
 ls()
 
-rm(list = ls())
+rm(list = ls()) #Eliminar todos los objetos del entorno
 
 class(3+2i)
 
@@ -208,11 +222,11 @@ class(3+2i)
 #2+7*i
 
 #pi + sqrt(2)i
-complex(real = pi, imaginary = sqrt(2)) -> z1
+complex(real = pi, imaginary = sqrt(2)) -> z1 #Lo tenemos que hacer así ya que los coeficientes no son racionales
 z1
 
 sqrt(-5)
-sqrt(as.complex(-5))
+sqrt(as.complex(-5)) #Debes decir que el argumento de la función sqrt es un objeto de la clase complex
 
 #La raíz cuadrada devuelve, de las dos soluciones la de
 #Re(z)>0, para obtener la otra,  hay que multiplicar por -1

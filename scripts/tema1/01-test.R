@@ -1,5 +1,5 @@
-#Esta línea no funciona, por ahora...
-#lm(y~x)
+#Esta línea no funciona, por ahora...esta es la forma de documentar
+#lm(y~x) alt + enter para ejecutar una linea
 
 
 require(graphics)
